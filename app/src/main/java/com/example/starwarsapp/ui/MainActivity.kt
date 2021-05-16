@@ -14,12 +14,14 @@ class MainActivity : AppCompatActivity() {
 
         val characterLuke = CharacterListItem("Maria", 24)
         val character2 = CharacterListItem("Gigel", 99)
-        val characterDetails = CharacterDetails("Mihai", 1968, 174, "alien", "unknown", "Marte", 67 )
+        val characterDetails = CharacterDetails("Mara", 1968, 159, "alien", "unknown", "Marte", 67 )
+        val characterDetails2 = CharacterDetails("Mara", 1968, 174, "alien", "unknown", "Marte", 67 )
 
-        println("Mara" + " " + characterLuke.age)
-        println("Mara" + " " + character2.name)
+        characterDetails.transformareInlocuire()
+        characterDetails.kilBill()
 
-        findViewById<TextView>(R.id.text2).text = characterDetails.language_of_species
+
+        findViewById<TextView>(R.id.text2).text = characterDetails.population.toString()
 
     }
 }
